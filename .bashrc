@@ -53,6 +53,12 @@ alias Txs="cp ~/Documents/LaTeX/beamer.tex"
 alias Txh="cp ~/Documents/LaTeX/handout.tex"
 alias TC='texclear'
 
+# Calendar
+alias week="gcalcli calw -w 35"
+alias month="gcalcli calm -w 35"
+
 source ~/.shortcuts
 
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
+alias week='let "q = ($COLUMNS - 8) / 7" && echo $q | xargs gcalcli calw -w'
+alias month='let "q = ($COLUMNS - 8) / 7" && echo $q | xargs gcalcli calm -w'
