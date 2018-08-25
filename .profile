@@ -5,7 +5,7 @@
 export PATH="$PATH:$HOME/.scripts"
 export EDITOR="vim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="qutebrowser"
 export READER="zathura"
 export BIB="$HOME/Documents/LaTeX/uni.bib"
 
