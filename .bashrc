@@ -40,7 +40,7 @@ alias crep="grep --color=always" # Color grep - highlight desired sequence.
 alias ccat="highlight --out-format=xterm256" #Color cat - print file with syntax highlighting.
 
 # Internet
-alias yt="youtube-dl --add-metadata -ic" # Download video link
+alias yt="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 --add-metadata -ic" # Download video link
 alias yta="youtube-dl --add-metadata -xic" # Download only audio
 alias YT="youtube-viewer"
 alias ethspeed="speedometer -r enp0s25"
@@ -58,7 +58,6 @@ alias week="gcalcli calw -w 35"
 alias month="gcalcli calm -w 35"
 
 source ~/.shortcuts
-
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 alias week='let "q = ($COLUMNS - 8) / 7" && echo $q | xargs gcalcli calw -w'
 alias month='let "q = ($COLUMNS - 8) / 7" && echo $q | xargs gcalcli calm -w'

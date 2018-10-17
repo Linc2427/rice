@@ -8,6 +8,7 @@ export TERMINAL="st"
 export BROWSER="qutebrowser"
 export READER="zathura"
 export BIB="$HOME/Documents/LaTeX/uni.bib"
+export CALCULATOR="octave"
 
 . ~/.scripts/shortcuts.sh 2>/dev/null
 

@@ -17,6 +17,11 @@ let mapleader =" "
 	set number
 	set relativenumber
 
+	set tabstop=2
+	set shiftwidth=2
+	set softtabstop=2
+	set expandtab
+
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow
 	set splitright
@@ -164,7 +169,7 @@ let mapleader =" "
 	autocmd FileType tex inoremap ,ot \begin{tableau}<Enter>\inp{<++>}<Tab>\const{<++>}<Tab><++><Enter><++><Enter>\end{tableau}<Enter><Enter><++><Esc>5kA{}<Esc>i
 	autocmd FileType tex inoremap ,can \cand{}<Tab><++><Esc>T{i
 	autocmd FileType tex inoremap ,con \const{}<Tab><++><Esc>T{i
-	autocmd FileType tex inoremap ,v \vio{}<Tab><++><Esc>T{i
+	autocmd FileType tex inoremap ,io \vio{}<Tab><++><Esc>T{i
 	autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
 	autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
 	autocmd FileType tex inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
@@ -180,6 +185,13 @@ let mapleader =" "
 	autocmd FileType tex inoremap ,nu $\varnothing$
 	autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
 	autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
+
+	autocmd FileType tex inoremap ,v \v{}<++><Esc>T{i
+	autocmd FileType tex inoremap ,_ _{}<++><Esc>T{i
+	autocmd FileType tex inoremap ,^ ^{}<++><Esc>T{i
+	autocmd FileType tex inoremap ,op \operatorname{}<++><Esc>T{i
+
+	autocmd FileType tex inoremap ,prob \problemnumber{}<Enter>\begin{problem}<Enter><++><Enter>\end{problem}<Enter><Enter>\begin{solution}<Enter><++><Enter>\end{solution}<Enter><Enter><++><Esc>9k$i
 
 """PHP/HTML
 	autocmd FileType php,html inoremap ,b <b></b><Space><++><Esc>FbT>i
