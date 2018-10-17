@@ -1,6 +1,12 @@
-stty -ixon
+#  _               _
+# | |__   __ _ ___| |__  _ __ ___
+# | '_ \ / _` / __| '_ \| '__/ __|
+# | |_) | (_| \__ \ | | | | | (__
+# |_.__/ \__,_|___/_| |_|_|  \___|
+
+stty -ixon # Disable ctrl-s and ctrl-q.
 shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
-HISTSIZE= HISTFILESIZE=
+HISTSIZE= HISTFILESIZE= # Infinite history.
 
 # Setting Bash prompt. Capitalizes username and host if root user (my root user uses this same config file).
 if [ "$EUID" -ne 0 ]
@@ -36,8 +42,8 @@ alias pi="bash ~/.larbs/wizard/wizard.sh"
 
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
-alias crep="grep --color=always" # Color grep - highlight desired sequence.
-alias ccat="highlight --out-format=xterm256" #Color cat - print file with syntax highlighting.
+alias grep="grep --color=auto" # Color grep - highlight desired sequence.
+alias ccat="highlight --out-format=ansi" # Color cat - print file with syntax highlighting.
 
 # Internet
 alias yt="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 --add-metadata -ic" # Download video link
@@ -52,10 +58,6 @@ alias Txa="cp ~/Documents/LaTeX/article.tex"
 alias Txs="cp ~/Documents/LaTeX/beamer.tex"
 alias Txh="cp ~/Documents/LaTeX/handout.tex"
 alias TC='texclear'
-
-# Calendar
-alias week="gcalcli calw -w 35"
-alias month="gcalcli calm -w 35"
 
 source ~/.shortcuts
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
